@@ -1,7 +1,7 @@
 @import '../../theme.scss';
 
 .CSVImporter_FileSelector {
-  border: 0.25em dashed $fgColor;
+  border: 0.25em $fgColor;
   padding: 4em;
   border-radius: $borderRadius;
   background: $fillColor;

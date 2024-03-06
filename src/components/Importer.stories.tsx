@@ -1,9 +1,9 @@
+import { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
-import { Story, Meta } from '@storybook/react';
 
-import { ImporterProps } from './ImporterProps';
-import { Importer, ImporterField } from './Importer';
 import { deDE } from '../locale';
+import { Importer, ImporterField } from './Importer';
+import { ImporterProps } from './ImporterProps';
 
 export default {
   title: 'Importer',

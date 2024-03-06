@@ -1,14 +1,14 @@
-import React, { useState, useMemo } from 'react';
 import { useDrag } from '@use-gesture/react';
+import React, { useMemo, useState } from 'react';
 
 import { FieldAssignmentMap } from '../../parser';
-import { Column } from './ColumnPreview';
-import { DragState } from './ColumnDragState';
-import { ColumnDragCard } from './ColumnDragCard';
 import { IconButton } from '../IconButton';
+import { ColumnDragCard } from './ColumnDragCard';
+import { DragState } from './ColumnDragState';
+import { Column } from './ColumnPreview';
 
-import './ColumnDragSourceArea.scss';
 import { useLocale } from '../../locale/LocaleContext';
+import './ColumnDragSourceArea.scss';
 
 const DEFAULT_PAGE_SIZE = 5; // fraction of 10 for easier counting
 
@@ -38,10 +38,10 @@ const SourceBox: React.FC<{
     [fieldAssignments, column]
   );
 
-  const eventHandlers = useMemo(() => eventBinder(column), [
-    eventBinder,
-    column
-  ]);
+  const eventHandlers = useMemo(
+    () => eventBinder(column),
+    [eventBinder, column]
+  );
 
   const l10n = useLocale('fieldsStep');
 
